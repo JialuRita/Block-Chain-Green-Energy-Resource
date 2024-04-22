@@ -1,1 +1,48 @@
+# 交接说明文档
+
+## 代码
+
+代码主要包括两部分
+
+- webase区块链管理系统代码（`./webase-deploy`）
+  - 其中webase区块链代码是基于[webase](https://webasedoc.readthedocs.io/zh-cn/latest/docs/WeBASE/install.html)所构建的一个区块链后台管理，只需要在`common.properties`中修改对应的配置即可。
+- 海南项目前后端代码（`./hn`）
+  - 项目前后端代码主要包括三个部分：Java后端，前台界面和后台管理的界面三部分，分别对应着 `./hn-server-admin`，`web`, `web-admin`三个文件夹， `hn-weapp`和`weapp`是两个小程序代码，后者已经被废弃，前者并未实际上线。
+
+## 具体介绍
+
+### 区块链管理系统
+
+webase-deploy基于WeBASE所提供功能基础上对前端页面的UI进行了部分调整，具体系统使用可以查看官方文档[webase一键部署](https://webasedoc.readthedocs.io/zh-cn/latest/docs/WeBASE/install.html)和[fisco bcos 2.x](https://fisco-bcos-documentation.readthedocs.io/zh-cn/latest/#) 
+
+### 海南项目前后端代码
+
+整体系统主要包括以下几个部分：
+
+- server-admin
+- web
+- web-admin
+- hn-weapp
+- weapp（已经废弃）
+
+#### server-admin
+
+Java实现的后端系统，主要对前台界面和后台界面提供支持，并和区块链进行交互进行链上数据的存储和查询
+
+#### web
+
+海南的前台界面，采用Vue2进行开发，主要功能包括资源的查看，资源的搜索，登录、注册等功能。
+
+#### web-admin
+
+海南的后台管理界面，采用Vue2开发，包括种质资源的收集、保存、鉴定和共享等功能，系统的基本管理功能。
+
+#### hn-weapp
+
+海南小程序界面，实现在手机对种质数据收集功能。采用uniapp进行开发，但小程序最终并未上线。
+
+#### weapp
+
+古早版本小程序，已经被废弃，采用原生小程序框架进行开发。
+
 
